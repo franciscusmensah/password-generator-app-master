@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./resource/style.css">
+  <title>Password generator app</title>
+</head>
+<body>
+
+  <section class="flex">
+    <h1>Password Generator</h1> 
+    <div class="grid">
+      <div class="display">
+          <div id="pGen"></div> 
+          <svg id="copy" style="width:24px;height:24px" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z" /> </svg>
+      </div>
+
+      <div class="content">
+        <div class="titleNumber">
+          <h1 class="title">Character Length </h1>
+          <h1 id='number' class="number">10</h1>
+        </div>
+        <div class="slide">
+          <input type="range" min="10" max="20" value="10" class="slider" id="myRange" >
+          <div id="progressBar"></div>
+        </div>
+        <div class="checkBoxes">
+
+          <div class="checkboxx">
+            <input type="checkbox" id="upperCase" name="upperCase" value="upper" >
+            <label for="Uppercase"> Include Uppercase Letters</label>
+          </div>
+          
+          <div class="checkboxx">
+            <input type="checkbox" id="lowerCase" name="LowerCase" value="lower" >
+            <label for="lowerCase"> Include Lowercase Letters</label>
+          </div>
+
+          <div class="checkboxx">
+            <input type="checkbox" id="incNumber" name="incNumber" value="num">
+            <label for="incNumber"> Include Numbers </label>
+          </div>
+
+          <div class="checkbox-end">
+            <input type="checkbox" id="incSym" name="incSym" value="sym">
+            <label for="incSym"> Include Symbol </label>
+          </div>
+        </div>
+        
+        <div class="strengthBar">
+          <h1>STRENGTH</h1>
+          <div class="right-side">
+            <h1 id="strengthTitle">TOO WEAK!</h1>
+            <div id="bar1"></div>
+            <div id="bar2"></div>
+            <div id="bar3"></div>
+            <div id="bar4"></div>
+
+          </div>
+        </div> 
+        <div id='button' class="button">
+          <h1> Generate <span>&#8594;</span></h1>
+        </div>
+
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  
+<script src="./resource/app.js"></script>
+</body>
+</html>
